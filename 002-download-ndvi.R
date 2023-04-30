@@ -4,10 +4,6 @@ library(MODIStsp)
 
 MODIStsp_get_prodlayers("M*D13Q1") # see bands names
 
-# create output directory if needed
-
- if(!fs::dir_exists("VegetationData")) fs::dir_create("VegetationData")
-
 # Modis Vegetation indices downloading ! Pay attention to area and/or 
 # period of interest. Files can be really huge.
 

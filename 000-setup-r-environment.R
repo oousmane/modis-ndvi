@@ -20,7 +20,6 @@ pak::pkg_install(
 # Load required libraries 
 
 pacman::p_load(
-  c(
     tidyverse,
     terra,
     sf,
@@ -29,5 +28,4 @@ pacman::p_load(
     MODIStsp,
     ggspatial,
     rgeoboundaries
-  )
 )

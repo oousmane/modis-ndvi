@@ -12,3 +12,14 @@ unzip(
   exdir ="bfa_adm_igb_20200323_shp" 
 )
 
+if(!fs::dir_exists("VegetationData")) fs::dir_create("VegetationData")
+if(!fs::dir_exists("VegetationData/shapefile")) fs::dir_create("VegetationData/shapefile")
+
+
+fs::dir_ls(path = "bfa_adm_igb_20200323_shp/",regexp = "adm0_igb_20200323") %>% 
+  fs::file_copy(new_path = "VegetationData/shapefile")
+
+# if you want to remove for space uncomment
+
+# fs::file_delete("bfa_adm_igb_20200323_shp.zip")
+# fs::dir_delete("bfa_adm_igb_20200323_shp/")
